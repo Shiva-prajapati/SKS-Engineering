@@ -1,11 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SKS Engineering Works - Precision Engineering Solutions</title>
+    <meta name="description"
+        content="SKS Engineering Works - Precision Engineering Solutions in Ghaziabad. High precision machine components, dye jigs fixtures, and turned parts.">
+    <title>SKS Engineering Works | Precision Engineering Solutions</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
     <style>
+        :root {
+            --primary-blue: #001f3f;
+            --primary-red: #d90429;
+            --accent-red: #ef233c;
+            --navy-deep: #000814;
+            --text-main: #2b2d42;
+            --text-muted: #8d99ae;
+            --bg-light: #f8f9fa;
+            --white: #ffffff;
+            --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.05);
+            --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+            --shadow-lg: 0 10px 30px rgba(0, 0, 0, 0.08);
+            --border-radius: 12px;
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
         * {
             margin: 0;
             padding: 0;
@@ -17,787 +46,628 @@
         }
 
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            color: #333;
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            color: var(--text-main);
             line-height: 1.6;
+            background-color: var(--white);
+            overflow-x: hidden;
         }
 
-        /* Header Styles */
+        h1,
+        h2,
+        h3,
+        .logo-text {
+            font-family: 'Outfit', sans-serif;
+            font-weight: 700;
+        }
+
+        /* --- Global Layout --- */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        section {
+            padding: 100px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+            font-size: 2.5rem;
+            color: var(--primary-blue);
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 4px;
+            background: var(--primary-red);
+            margin: 15px auto 0;
+            border-radius: 2px;
+        }
+
+        /* --- Header & Navigation --- */
         header {
-            background: linear-gradient(to bottom, #1a3a52 0%, #0d1f2d 100%);
-            padding: 15px 0;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+            background: linear-gradient(90deg, #021021 0%, #300c11 100%);
             position: sticky;
             top: 0;
             z-index: 1000;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+            border-bottom: 2px solid #a4161a;
         }
 
-        .header-container {
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        /* Top Header Section */
         .header-top {
             display: flex;
             justify-content: space-between;
             align-items: center;
+            padding: 10px 0;
             flex-wrap: wrap;
             gap: 20px;
-            padding-bottom: 15px;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
         }
 
-        .logo-section {
+        .logo-box {
             display: flex;
             align-items: center;
             gap: 15px;
+            text-decoration: none;
         }
 
-        .logo {
-            background: linear-gradient(135deg, #cc0000 0%, #ff3333 100%);
-            width: 50px;
-            height: 50px;
-            border-radius: 8px;
+        .logo-square {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(to top right, #0d1b3e 0%, #0d1b3e 30%, #a4161a 70%, #a4161a 100%);
             display: flex;
             align-items: center;
             justify-content: center;
-            font-weight: bold;
-            color: white;
-            font-size: 24px;
-            box-shadow: 0 4px 15px rgba(204, 0, 0, 0.3);
+            color: var(--white);
+            font-weight: 700;
+            font-size: 1.8rem;
+            font-family: 'Times New Roman', Times, serif;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
         }
 
-        .logo-text {
-            color: white;
-            font-size: 22px;
-            font-weight: bold;
+        .logo-text-group {
+            display: flex;
+            flex-direction: column;
+            line-height: 0.85;
+            margin-left: 5px;
+        }
+
+        .logo-name {
+            font-size: 3.2rem;
+            color: var(--white);
+            font-family: 'Times New Roman', Times, serif;
+            font-weight: 900;
+            letter-spacing: -1px;
+        }
+
+        .logo-subtitle {
+            font-size: 1.8rem;
+            color: var(--white);
+            font-family: 'Times New Roman', Times, serif;
+            font-weight: 600;
+        }
+
+        .tax-item span {
+            display: block;
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 0.7rem;
+            text-transform: uppercase;
+        }
+
+        .tax-item strong {
+            color: var(--white);
+        }
+
+        .header-actions {
+            display: flex;
+            gap: 12px;
+        }
+
+        .btn-call {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 18px;
+            border-radius: 6px;
+            font-weight: 700;
+            font-size: 0.9rem;
+            text-decoration: none;
+            transition: var(--transition);
+            color: var(--white);
+        }
+
+        .btn-green {
+            background-color: #27ae60;
+            box-shadow: 0 4px 10px rgba(39, 174, 96, 0.2);
+        }
+
+        .btn-red {
+            background-color: var(--primary-red);
+            box-shadow: 0 4px 10px rgba(217, 4, 41, 0.2);
+        }
+
+        .btn-call:hover {
+            transform: translateY(-2px);
+            filter: brightness(1.1);
+        }
+
+        /* Navigation Line */
+        .nav-services {
+            background: var(--primary-blue);
+            color: var(--white);
+            padding: 12px 0;
+            font-size: 0.9rem;
+            font-weight: 500;
+            text-align: center;
+        }
+
+        .nav-services span {
+            opacity: 0.8;
+            margin: 0 15px;
+        }
+
+        .nav-services .divider {
+            color: var(--primary-red);
+            font-weight: 900;
+        }
+
+        /* --- Hero Section --- */
+        .hero {
+            position: relative;
+            height: 80vh;
+            min-height: 600px;
+            background: url('hero_industrial_cnc_1772811637029.png') no-repeat center center/cover;
+            display: flex;
+            align-items: center;
+            color: var(--white);
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(90deg, rgba(0, 8, 20, 0.85) 0%, rgba(0, 8, 20, 0.4) 100%);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 10;
+            max-width: 700px;
+        }
+
+        .hero-label {
+            display: inline-block;
+            background: var(--primary-red);
+            padding: 6px 16px;
+            font-size: 0.9rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            border-radius: 4px;
+            margin-bottom: 20px;
             letter-spacing: 1px;
         }
 
-        .logo-text .main {
-            display: block;
-            font-size: 24px;
+        .hero h1 {
+            font-size: 4rem;
+            line-height: 1.1;
+            margin-bottom: 20px;
         }
 
-        .logo-text .sub {
-            display: block;
-            font-size: 12px;
-            color: #ffcc00;
-            letter-spacing: 2px;
+        .hero p {
+            font-size: 1.5rem;
+            margin-bottom: 40px;
+            opacity: 0.9;
+            font-weight: 300;
         }
 
-        .header-info {
+        .hero-btns {
             display: flex;
-            gap: 30px;
             align-items: center;
-            color: #e0e0e0;
-            font-size: 13px;
+            gap: 25px;
             flex-wrap: wrap;
         }
 
-        .info-item {
+        .btn-main {
+            background: var(--primary-red);
+            color: var(--white);
+            padding: 18px 40px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.1rem;
+            transition: var(--transition);
+            box-shadow: 0 10px 20px rgba(217, 4, 41, 0.3);
+        }
+
+        .btn-main:hover {
+            transform: translateY(-4px);
+            background: var(--accent-red);
+            box-shadow: 0 15px 30px rgba(217, 4, 41, 0.4);
+        }
+
+        .hero-phones {
+            display: flex;
+            gap: 20px;
+            font-weight: 600;
+        }
+
+        .hero-phone-item {
             display: flex;
             flex-direction: column;
             gap: 2px;
         }
 
-        .info-label {
-            color: #ffcc00;
-            font-weight: bold;
-            font-size: 11px;
-            letter-spacing: 0.5px;
+        .hero-phone-item span {
+            font-size: 0.8rem;
+            color: rgba(255, 255, 255, 0.6);
         }
 
-        .info-value {
-            color: white;
-            font-weight: 500;
-        }
-
-        .call-buttons {
-            display: flex;
-            gap: 12px;
-            flex-wrap: wrap;
-        }
-
-        .call-btn {
-            padding: 10px 18px;
-            border: none;
-            border-radius: 6px;
-            font-weight: bold;
-            cursor: pointer;
-            font-size: 13px;
-            display: flex;
+        /* --- About Section --- */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.1fr;
+            gap: 60px;
             align-items: center;
-            gap: 8px;
-            transition: all 0.3s ease;
-            text-decoration: none;
-            color: white;
         }
 
-        .call-btn.green {
-            background: linear-gradient(135deg, #27ae60 0%, #16a34a 100%);
-            box-shadow: 0 4px 15px rgba(39, 174, 96, 0.3);
-        }
-
-        .call-btn.green:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(39, 174, 96, 0.4);
-        }
-
-        .call-btn.red {
-            background: linear-gradient(135deg, #cc0000 0%, #ff3333 100%);
-            box-shadow: 0 4px 15px rgba(204, 0, 0, 0.3);
-        }
-
-        .call-btn.red:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(204, 0, 0, 0.4);
-        }
-
-        /* Navigation Line */
-        .nav-line {
-            padding: 12px 0;
-            color: #b0b0b0;
-            font-size: 13px;
-            font-weight: 500;
-            letter-spacing: 0.5px;
-        }
-
-        .nav-line span {
-            display: inline-block;
-            margin: 0 10px;
-        }
-
-        .nav-line span:first-child {
-            margin-left: 0;
-        }
-
-        /* Hero Section */
-        .hero {
+        .about-img {
             position: relative;
-            height: 500px;
-            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6)), 
-                        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><defs><pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="1"/></pattern><linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:rgb(30,60,100);stop-opacity:1" /><stop offset="100%" style="stop-color:rgb(50,80,120);stop-opacity:1" /></linearGradient></defs><rect width="1200" height="600" fill="url(%23grad)"/><rect width="1200" height="600" fill="url(%23grid)"/><circle cx="100" cy="100" r="150" fill="rgba(204,0,0,0.1)"/><circle cx="1100" cy="500" r="200" fill="rgba(52,152,219,0.1)"/></svg>');
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            color: white;
+            height: 400px;
             overflow: hidden;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-lg);
         }
 
-        .hero-content {
-            z-index: 2;
-            max-width: 800px;
-            padding: 20px;
-            animation: fadeInDown 0.8s ease-out;
-        }
-
-        @keyframes fadeInDown {
-            from {
-                opacity: 0;
-                transform: translateY(-30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .hero h1 {
-            font-size: 56px;
-            margin-bottom: 10px;
-            font-weight: 700;
-            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
-            letter-spacing: 1px;
-        }
-
-        .hero .highlight {
-            color: #ffcc00;
-        }
-
-        .hero p {
-            font-size: 24px;
-            margin-bottom: 30px;
-            text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
-        }
-
-        .cta-button {
-            display: inline-block;
-            padding: 15px 40px;
-            background: linear-gradient(135deg, #cc0000 0%, #ff3333 100%);
-            color: white;
-            text-decoration: none;
-            border-radius: 8px;
-            font-weight: bold;
-            font-size: 16px;
-            transition: all 0.3s ease;
-            box-shadow: 0 6px 20px rgba(204, 0, 0, 0.4);
-            border: none;
-            cursor: pointer;
-        }
-
-        .cta-button:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 30px rgba(204, 0, 0, 0.6);
-        }
-
-        /* About Section */
-        .about {
-            padding: 80px 20px;
-            background: #f8f9fa;
-        }
-
-        .about-container {
-            max-width: 1400px;
-            margin: 0 auto;
-        }
-
-        .section-title {
-            font-size: 42px;
-            font-weight: 700;
-            margin-bottom: 50px;
-            color: #0d1f2d;
-            letter-spacing: 0.5px;
-        }
-
-        .about-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 60px;
-            align-items: center;
-        }
-
-        .about-text {
-            font-size: 16px;
-            line-height: 1.8;
-            color: #555;
-        }
-
-        .about-text p {
-            margin-bottom: 20px;
-        }
-
-        .about-text strong {
-            color: #cc0000;
-            font-weight: 600;
-        }
-
-        .about-image {
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
-            animation: zoomIn 0.8s ease-out;
-        }
-
-        @keyframes zoomIn {
-            from {
-                opacity: 0;
-                transform: scale(0.95);
-            }
-            to {
-                opacity: 1;
-                transform: scale(1);
-            }
-        }
-
-        .about-image img {
-            width: 100%;
-            height: auto;
-            display: block;
-            transition: transform 0.3s ease;
-        }
-
-        .about-image:hover img {
-            transform: scale(1.05);
-        }
-
-        /* Services Section */
-        .services {
-            padding: 80px 20px;
-            background: white;
-        }
-
-        .services-container {
-            max-width: 1400px;
-            margin: 0 auto;
-        }
-
-        .services-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 60px;
-            align-items: center;
-        }
-
-        .services-list {
-            list-style: none;
-        }
-
-        .services-list li {
-            padding: 18px 0;
-            font-size: 18px;
-            font-weight: 600;
-            color: #333;
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            border-bottom: 1px solid #e0e0e0;
-            transition: all 0.3s ease;
-        }
-
-        .services-list li:last-child {
-            border-bottom: none;
-        }
-
-        .services-list li:hover {
-            color: #cc0000;
-            transform: translateX(10px);
-        }
-
-        .services-list li:before {
-            content: '✓';
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            width: 28px;
-            height: 28px;
-            background: linear-gradient(135deg, #cc0000 0%, #ff3333 100%);
-            color: white;
-            border-radius: 50%;
-            font-weight: bold;
-            flex-shrink: 0;
-            font-size: 16px;
-        }
-
-        .services-images {
-            display: grid;
-            grid-template-rows: 1fr 1fr;
-            gap: 20px;
-        }
-
-        .services-images .large-img {
-            grid-row: 1 / 3;
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
-        }
-
-        .services-images .small-img {
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
-        }
-
-        .services-images img {
+        .about-img img {
             width: 100%;
             height: 100%;
             object-fit: cover;
             display: block;
-            transition: transform 0.3s ease;
         }
 
-        .services-images:hover img {
-            transform: scale(1.05);
+        .about-text h2 {
+            font-size: 2.5rem;
+            margin-bottom: 25px;
+            color: var(--primary-blue);
         }
 
-        /* Gallery Section */
+        .about-text p {
+            font-size: 1.1rem;
+            color: var(--text-main);
+            margin-bottom: 25px;
+            opacity: 0.9;
+        }
+
+        .about-highlights {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .highlight-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-weight: 600;
+        }
+
+        .highlight-item i {
+            color: var(--primary-red);
+            font-size: 1.2rem;
+        }
+
+        /* --- Services Section --- */
+        .services {
+            background-color: var(--bg-light);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .service-card {
+            background: var(--white);
+            padding: 40px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+            border-bottom: 4px solid transparent;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-lg);
+            border-color: var(--primary-red);
+        }
+
+        .service-icon {
+            width: 60px;
+            height: 60px;
+            background: rgba(217, 4, 41, 0.1);
+            color: var(--primary-red);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            border-radius: 12px;
+            margin-bottom: 25px;
+        }
+
+        .service-card h3 {
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+            color: var(--primary-blue);
+        }
+
+        .service-card p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        /* --- Gallery Section --- */
         .gallery {
-            padding: 80px 20px;
-            background: #f8f9fa;
-        }
-
-        .gallery-container {
-            max-width: 1400px;
-            margin: 0 auto;
+            background-color: var(--white);
+            padding: 60px 0;
         }
 
         .gallery-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 25px;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
         }
 
         .gallery-item {
-            position: relative;
-            border-radius: 12px;
             overflow: hidden;
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
-            transition: all 0.3s ease;
-            aspect-ratio: 1;
+            border-radius: 8px;
+            height: 180px;
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
         }
 
         .gallery-item:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+            transform: scale(1.03);
+            box-shadow: var(--shadow-md);
         }
 
         .gallery-item img {
             width: 100%;
             height: 100%;
             object-fit: cover;
-            display: block;
-            transition: transform 0.3s ease;
         }
 
-        .gallery-item:hover img {
-            transform: scale(1.1);
+        @media (max-width: 992px) {
+            .gallery-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
         }
 
-        .gallery-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(204, 0, 0, 0.7);
+        @media (max-width: 480px) {
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .gallery-item {
+                height: 200px;
+            }
+        }
+
+        /* --- Contact Section --- */
+        .contact-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            background: var(--white);
+            border-radius: 20px;
+            box-shadow: var(--shadow-lg);
+            overflow: hidden;
+        }
+
+        .contact-info {
+            padding: 60px;
+            background: var(--navy-deep);
+            color: var(--white);
+        }
+
+        .contact-info h2 {
+            color: var(--white);
+            margin-bottom: 40px;
+        }
+
+        .contact-item {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .contact-icon {
+            width: 45px;
+            height: 45px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            opacity: 0;
-            transition: opacity 0.3s ease;
+            color: var(--primary-red);
+            font-size: 1.1rem;
+            flex-shrink: 0;
         }
 
-        .gallery-item:hover .gallery-overlay {
-            opacity: 1;
-        }
-
-        .gallery-overlay i {
-            font-size: 40px;
-            color: white;
-        }
-
-        /* Contact Section */
-        .contact {
-            padding: 80px 20px;
-            background: white;
-        }
-
-        .contact-container {
-            max-width: 1400px;
-            margin: 0 auto;
-        }
-
-        .contact-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 60px;
-        }
-
-        .contact-info-box {
-            background: linear-gradient(135deg, #0d1f2d 0%, #1a3a52 100%);
-            padding: 40px;
-            border-radius: 12px;
-            color: white;
-        }
-
-        .contact-info-box h3 {
-            font-size: 20px;
-            margin-bottom: 25px;
-            color: #ffcc00;
-            font-weight: 700;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .info-group {
-            margin-bottom: 35px;
-        }
-
-        .info-group:last-child {
-            margin-bottom: 0;
-        }
-
-        .info-group label {
+        .contact-text label {
             display: block;
-            font-size: 12px;
-            color: #b0b0b0;
-            margin-bottom: 8px;
-            font-weight: 600;
-            letter-spacing: 0.5px;
+            font-size: 0.75rem;
+            color: rgba(255, 255, 255, 0.5);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 5px;
         }
 
-        .info-group a,
-        .info-group p {
-            font-size: 16px;
-            color: white;
-            font-weight: 500;
+        .contact-text p,
+        .contact-text a {
+            color: var(--white);
             text-decoration: none;
-            line-height: 1.8;
+            font-size: 1.1rem;
+            font-weight: 500;
         }
 
-        .info-group a:hover {
-            color: #ffcc00;
-        }
-
-        .map-container {
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+        .contact-map {
+            width: 100%;
             height: 100%;
             min-height: 400px;
         }
 
-        .map-container iframe {
+        .contact-map iframe {
             width: 100%;
             height: 100%;
             border: none;
         }
 
-        /* Footer */
+        /* --- Footer --- */
         footer {
-            background: linear-gradient(to right, #0d1f2d 0%, #1a3a52 100%);
-            color: white;
+            background: var(--navy-deep);
+            color: rgba(255, 255, 255, 0.6);
+            padding: 40px 0;
             text-align: center;
-            padding: 30px 20px;
-            font-size: 14px;
-            border-top: 3px solid #cc0000;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
         }
 
-        /* Responsive Design */
+        footer strong {
+            color: var(--white);
+        }
+
+        /* --- Responsive Design --- */
         @media (max-width: 1024px) {
             .hero h1 {
-                font-size: 42px;
+                font-size: 3rem;
             }
 
-            .hero p {
-                font-size: 18px;
-            }
-
-            .about-content,
-            .services-content,
-            .contact-content {
-                grid-template-columns: 1fr;
+            .about-grid {
                 gap: 40px;
             }
 
-            .services-images {
-                grid-template-columns: 1fr 1fr;
-                grid-template-rows: auto auto;
-            }
-
-            .services-images .large-img {
-                grid-column: 1 / -1;
-                grid-row: auto;
-            }
-
-            .contact-content {
-                gap: 40px;
-            }
-
-            .map-container {
-                min-height: 300px;
+            .header-tax-info {
+                display: none;
             }
         }
 
         @media (max-width: 768px) {
-            header {
-                padding: 10px 0;
+            .section-title {
+                font-size: 2rem;
             }
 
             .header-top {
-                flex-direction: column;
-                align-items: flex-start;
-                gap: 15px;
-            }
-
-            .logo-section {
-                width: 100%;
-            }
-
-            .header-info {
-                width: 100%;
-                flex-direction: column;
-                gap: 15px;
-            }
-
-            .call-buttons {
-                width: 100%;
-                justify-content: flex-start;
-            }
-
-            .call-btn {
-                flex: 1;
                 justify-content: center;
-                padding: 12px 15px;
-                font-size: 12px;
-            }
-
-            .nav-line {
-                width: 100%;
-                text-align: left;
-                padding: 10px 0;
-            }
-
-            .nav-line span {
-                display: block;
-                margin: 5px 0;
+                padding: 20px 0;
             }
 
             .hero {
-                height: 350px;
+                height: auto;
+                padding: 120px 0 80px;
+                text-align: center;
             }
 
-            .hero h1 {
-                font-size: 32px;
+            .hero-btns {
+                justify-content: center;
+                flex-direction: column;
             }
 
-            .hero p {
-                font-size: 16px;
-            }
-
-            .cta-button {
-                padding: 12px 30px;
-                font-size: 14px;
-            }
-
-            .section-title {
-                font-size: 32px;
-                margin-bottom: 30px;
-            }
-
-            .about-content,
-            .services-content,
-            .contact-content {
-                gap: 30px;
-            }
-
-            .services-images {
+            .about-grid {
                 grid-template-columns: 1fr;
             }
 
-            .services-images .large-img {
-                grid-row: auto;
+            .about-img::after {
+                display: none;
             }
 
-            .gallery-grid {
-                grid-template-columns: repeat(2, 1fr);
-                gap: 15px;
+            .contact-wrapper {
+                grid-template-columns: 1fr;
             }
 
-            .contact-info-box,
-            .map-container {
-                min-height: 300px;
+            .contact-info {
+                padding: 40px 30px;
+            }
+
+            .nav-services {
+                font-size: 0.8rem;
+                overflow-x: auto;
+                white-space: nowrap;
+                padding: 12px 20px;
             }
         }
 
         @media (max-width: 480px) {
-            .hero {
-                height: 280px;
-            }
-
             .hero h1 {
-                font-size: 24px;
-                margin-bottom: 15px;
+                font-size: 2.2rem;
             }
 
             .hero p {
-                font-size: 14px;
-                margin-bottom: 20px;
+                font-size: 1.1rem;
             }
 
-            .cta-button {
-                padding: 10px 25px;
-                font-size: 13px;
-            }
-
-            .section-title {
-                font-size: 26px;
-                margin-bottom: 20px;
-            }
-
-            .about,
-            .services,
-            .gallery,
-            .contact {
-                padding: 50px 15px;
+            .btn-main {
+                width: 100%;
+                padding: 15px;
             }
 
             .gallery-grid {
                 grid-template-columns: 1fr;
             }
 
-            .services-list li {
-                padding: 15px 0;
-                font-size: 16px;
-            }
-
-            .contact-info-box {
+            .service-card {
                 padding: 30px 20px;
             }
-
-            .call-btn {
-                font-size: 11px;
-                padding: 8px 12px;
-            }
-
-            .info-group a,
-            .info-group p {
-                font-size: 15px;
-            }
-        }
-
-        /* Utility Classes */
-        .icon-phone {
-            color: #cc0000;
-        }
-
-        .icon-envelope {
-            color: #cc0000;
-        }
-
-        .icon-map-marker {
-            color: #cc0000;
         }
     </style>
 </head>
+
 <body>
+
     <!-- Header -->
     <header>
-        <div class="header-container">
-            <!-- Top Header with Logo, Info and Call Buttons -->
+        <div class="container">
             <div class="header-top">
-                <div class="logo-section">
-                    <div class="logo">SKS</div>
-                    <div class="logo-text">
-                        <span class="main">SKS</span>
-                        <span class="sub">Engineering Works</span>
+                <a href="#" class="logo-box">
+                    <div class="logo-square">SKS</div>
+                    <div class="logo-text-group">
+                        <span class="logo-name">SKS</span>
+                        <span class="logo-subtitle">Engineering Works</span>
+                    </div>
+                </a>
+
+                <div class="header-tax-info">
+                    <div class="tax-item">
+                        <span>GST Number</span>
+                        <strong>09DRBPS1981RZT</strong>
+                    </div>
+                    <div class="tax-item">
+                        <span>PAN Number</span>
+                        <strong>DRBPS1981R</strong>
                     </div>
                 </div>
 
-                <div class="header-info">
-                    <div class="info-item">
-                        <span class="info-label">GST No.</span>
-                        <span class="info-value">09DRBPS1981RZT</span>
-                    </div>
-                    <div class="info-item">
-                        <span class="info-label">PAN No.</span>
-                        <span class="info-value">DRBPS1981R</span>
-                    </div>
-                </div>
-
-                <div class="call-buttons">
-                    <a href="tel:7982032725" class="call-btn green">
-                        <i class="fas fa-phone"></i> Call: 7982032725
+                <div class="header-actions">
+                    <a href="tel:7982032725" class="btn-call btn-green">
+                        <i class="fas fa-phone-alt"></i> 7982032725
                     </a>
-                    <a href="tel:8860244593" class="call-btn red">
-                        <i class="fas fa-phone"></i> Call: 8860244593
+                    <a href="tel:8860244593" class="btn-call btn-red">
+                        <i class="fas fa-phone-alt"></i> 8860244593
                     </a>
                 </div>
             </div>
-
-            <!-- Navigation Line -->
-            <div class="nav-line">
+        </div>
+        <div class="nav-services">
+            <div class="container">
                 <span>Machine Components</span>
-                <span>|</span>
+                <span class="divider">|</span>
                 <span>Dye Jigs Fixtures Precision</span>
-                <span>|</span>
+                <span class="divider">|</span>
                 <span>Turned Parts</span>
             </div>
         </div>
@@ -805,120 +675,160 @@
 
     <!-- Hero Section -->
     <section class="hero">
-        <div class="hero-content">
-            <h1>Welcome to <span class="highlight">SKS Engineering Works</span></h1>
-            <p>Precision Engineering Solutions in Ghaziabad</p>
-            <button class="cta-button" onclick="document.querySelector('.contact').scrollIntoView({behavior: 'smooth'})">
-                <i class="fas fa-envelope"></i> Contact Us
-            </button>
+        <div class="container">
+            <div class="hero-content">
+                <span class="hero-label">Excellence in Engineering</span>
+                <h1>Welcome to <br>SKS Engineering Works</h1>
+                <p>Precision Engineering Solutions in Ghaziabad. Delivering quality components for over a decade.</p>
+
+                <div class="hero-btns">
+                    <a href="#contact" class="btn-main">Contact Us Now</a>
+                    <div class="hero-phones">
+                        <div class="hero-phone-item">
+                            <span>Main Contact</span>
+                            <a href="tel:7982032725" style="color: white; text-decoration: none;">7982032725</a>
+                        </div>
+                        <div class="hero-phone-item">
+                            <span>Technical Support</span>
+                            <a href="tel:8860244593" style="color: white; text-decoration: none;">8860244593</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
     <!-- About Section -->
-    <section class="about">
-        <div class="about-container">
-            <div class="about-content">
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-grid">
                 <div class="about-text">
-                    <h2 class="section-title">About Us</h2>
-                    <p><strong>SKS Engineering Works</strong> is a precision engineering workshop located in Ghaziabad.</p>
-                    <p>We specialize in manufacturing <strong>machine components, dye jigs fixtures, turned parts</strong> and repairing of all kinds of job works with <strong>high precision</strong>.</p>
+                    <h2 class="section-title" style="text-align: left; margin-left: 0;">Who We Are</h2>
+                    <p><strong>SKS Engineering Works</strong> is a leading precision engineering workshop located in the
+                        industrial hub of Ghaziabad.</p>
+                    <p>We pride ourselves on our technical expertise and commitment to quality. We specialize in
+                        manufacturing high-tolerance machine components, dye jigs, precision fixtures, and turned parts
+                        that meet global industrial standards.</p>
+                    <div class="about-highlights">
+                        <div class="highlight-item"><i class="fas fa-check-circle"></i> High Precision</div>
+                        <div class="highlight-item"><i class="fas fa-check-circle"></i> Quality Material</div>
+                        <div class="highlight-item"><i class="fas fa-check-circle"></i> On-time Delivery</div>
+                        <div class="highlight-item"><i class="fas fa-check-circle"></i> Experienced Team</div>
+                    </div>
                 </div>
-                <div class="about-image">
-                    <img src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=600&h=600&fit=crop" alt="SKS Engineering Workshop">
+                <div class="about-img">
+                    <img src="https://vignanits.ac.in/wp-content/uploads/2020/07/workshop2.jpg"
+                        alt="SKS Engineering Workshop">
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Services Section -->
-    <section class="services">
-        <div class="services-container">
+    <section id="services" class="services">
+        <div class="container">
             <h2 class="section-title">Our Services</h2>
-            <div class="services-content">
-                <ul class="services-list">
-                    <li>Machine Components Manufacturing</li>
-                    <li>Dye Jigs Fixtures Precision Work</li>
-                    <li>Turned Parts Manufacturing</li>
-                    <li>All Types of Job Work</li>
-                    <li>Machine Repairing</li>
-                </ul>
-                <div class="services-images">
-                    <div class="large-img">
-                        <img src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=500&h=500&fit=crop" alt="CNC Machine Work">
-                    </div>
-                    <div class="small-img">
-                        <img src="https://images.unsplash.com/photo-1581092163562-40038e57e0a8?w=500&h=250&fit=crop" alt="Precision Engineering">
-                    </div>
-                    <div class="small-img">
-                        <img src="https://images.unsplash.com/photo-1581092160562-40038e57e0a7?w=500&h=250&fit=crop" alt="Workshop Equipment">
-                    </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-cogs"></i></div>
+                    <h3>Machine Components</h3>
+                    <p>Manufacturing of complex mechanical components with extreme precision using modern machining
+                        centers.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-tools"></i></div>
+                    <h3>Dye Jigs & Fixtures</h3>
+                    <p>Expert fabrication of precision jigs and fixtures designed to optimize your manufacturing
+                        processes.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-microchip"></i></div>
+                    <h3>Turned Parts</h3>
+                    <p>High-quality turned parts manufacturing for various industrial applications and equipment.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-hammer"></i></div>
+                    <h3>Job Work</h3>
+                    <p>Reliable job work services for all types of industrial requirements, tailored to your specific
+                        blueprints.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-wrench"></i></div>
+                    <h3>Machine Repairing</h3>
+                    <p>Professional repair and maintenance of industrial machinery to ensure minimal downtime for your
+                        business.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-shield-alt"></i></div>
+                    <h3>Precision Solutions</h3>
+                    <p>Custom engineering solutions focused on durability, accuracy, and operational efficiency.</p>
                 </div>
             </div>
         </div>
     </section>
 
+
     <!-- Gallery Section -->
-    <section class="gallery">
-        <div class="gallery-container">
+    <section id="gallery" class="gallery">
+        <div class="container">
             <h2 class="section-title">Workshop Gallery</h2>
             <div class="gallery-grid">
                 <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=400&h=400&fit=crop" alt="Workshop Gallery 1">
-                    <div class="gallery-overlay">
-                        <i class="fas fa-search-plus"></i>
-                    </div>
+                    <img src="https://energymachine.in/images/resource/r4-4.jpg" alt="Precision CNC Machining">
                 </div>
                 <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1581092163562-40038e57e0a8?w=400&h=400&fit=crop" alt="Workshop Gallery 2">
-                    <div class="gallery-overlay">
-                        <i class="fas fa-search-plus"></i>
-                    </div>
+                    <img src="https://images.unsplash.com/photo-1537462715879-360eeb61a0ad?w=500&h=300&fit=crop"
+                        alt="High Precision Metal Parts">
                 </div>
                 <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1581092560562-40038e57e0a9?w=400&h=400&fit=crop" alt="Workshop Gallery 3">
-                    <div class="gallery-overlay">
-                        <i class="fas fa-search-plus"></i>
-                    </div>
+                    <img src="https://advanceglobalsupplies.net/wp-content/uploads/2013/09/part-spare-caterpillar.jpg"
+                        alt="Heavy Engineering Components">
                 </div>
                 <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1581092162235-60038e57e0a1?w=400&h=400&fit=crop" alt="Workshop Gallery 4">
-                    <div class="gallery-overlay">
-                        <i class="fas fa-search-plus"></i>
-                    </div>
+                    <img src="https://us.images.westend61.de/0001338061pw/factory-shop-floor-KNSF07720.jpg"
+                        alt="Industrial Workshop Floor">
                 </div>
+
             </div>
         </div>
     </section>
 
     <!-- Contact Section -->
-    <section class="contact">
-        <div class="contact-container">
-            <h2 class="section-title">Contact Information</h2>
-            <div class="contact-content">
-                <div class="contact-info-box">
-                    <h3><i class="fas fa-phone icon-phone"></i> Phone</h3>
-                    <div class="info-group">
-                        <label>Call us anytime</label>
-                        <a href="tel:7982032725">7982032725</a>
-                    </div>
-                    <div class="info-group">
-                        <a href="tel:8860244593">8860244593</a>
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="contact-wrapper">
+                <div class="contact-info">
+                    <h2>Get In Touch</h2>
+
+                    <div class="contact-item">
+                        <div class="contact-icon"><i class="fas fa-phone-alt"></i></div>
+                        <div class="contact-text">
+                            <label>Call Us</label>
+                            <p>+91 7982032725<br>+91 8860244593</p>
+                        </div>
                     </div>
 
-                    <h3><i class="fas fa-envelope icon-envelope"></i> Email</h3>
-                    <div class="info-group">
-                        <label>Get in touch via email</label>
-                        <a href="mailto:sksengineeringworks121@gmail.com">sksengineeringworks121@gmail.com</a>
+                    <div class="contact-item">
+                        <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                        <div class="contact-text">
+                            <label>Email Address</label>
+                            <a href="mailto:sksengineeringworks121@gmail.com">sksengineeringworks121@gmail.com</a>
+                        </div>
                     </div>
 
-                    <h3><i class="fas fa-map-marker icon-map-marker"></i> Address</h3>
-                    <div class="info-group">
-                        <p>Kh. No. 79-45<br>Futa Road<br>New Star Dharam Kanta<br>Hindon Vihar<br>Ghaziabad (U.P.) 201001</p>
+                    <div class="contact-item">
+                        <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+                        <div class="contact-text">
+                            <label>Workshop Location</label>
+                            <p>Kh. No. 79-45, Futa Road,<br>New Star Dharam Kanta, Hindon Vihar,<br>Ghaziabad (U.P.)
+                                201001</p>
+                        </div>
                     </div>
                 </div>
-
-                <div class="map-container">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3500.123456789!2d77.12345!3d28.98765!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce2c5a5a5a5a5%3A0x5a5a5a5a5a5a5a5a!2sGhaziabad%2C%20Uttar%20Pradesh%20201001!5e0!3m2!1sen!2sin!4v1234567890" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <div class="contact-map">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3501.07630733856!2d77.41113!3d28.69485!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cf39a7b539c71%3A0x6d4957e3f8983562!2sGhaziabad%2C%20Uttar%20Pradesh!5e0!3m2!1sen!2sin!4v1700000000000"
+                        allowfullscreen="" loading="lazy"></iframe>
                 </div>
             </div>
         </div>
@@ -926,44 +836,42 @@
 
     <!-- Footer -->
     <footer>
-        <p>&copy; SKS Engineering Works. All rights reserved. | Precision Engineering Solutions | Ghaziabad</p>
+        <div class="container">
+            <p>&copy; 2024 <strong>SKS Engineering Works</strong>. All rights reserved.</p>
+            <p style="font-size: 0.8rem; margin-top: 10px;">Precision & Excellence in Industrial Manufacturing</p>
+        </div>
     </footer>
 
     <script>
-        // Smooth scroll for navigation
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth'
-                    });
-                }
-            });
-        });
+        // Reveal animations on scroll
+        const observeElements = document.querySelectorAll('.service-card, .about-img, .about-text, .gallery-item');
 
-        // Add scroll animation for elements
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
-        const observer = new IntersectionObserver(function(entries) {
+        const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     entry.target.style.opacity = '1';
                     entry.target.style.transform = 'translateY(0)';
                 }
             });
-        }, observerOptions);
+        }, { threshold: 0.1 });
 
-        document.querySelectorAll('.about-text, .services-list, .gallery-item, .contact-info-box').forEach(el => {
+        observeElements.forEach(el => {
             el.style.opacity = '0';
-            el.style.transform = 'translateY(20px)';
-            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            el.style.transform = 'translateY(30px)';
+            el.style.transition = 'all 0.6s cubic-bezier(0.4, 0, 0.2, 1)';
             observer.observe(el);
+        });
+
+        // Header scroll effect
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.style.padding = '5px 0';
+            } else {
+                header.style.padding = '0';
+            }
         });
     </script>
 </body>
+
 </html>
